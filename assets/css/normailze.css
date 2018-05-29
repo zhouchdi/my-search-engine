@@ -1,0 +1,24 @@
+@import "http://at.alicdn.com/t/font_683819_ovsjszrcoyjy8pvi.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 700px;
+  font-style: normal;
+  background: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+  background: #607d8b;
+  color: white;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
