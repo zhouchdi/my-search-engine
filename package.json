@@ -19,8 +19,7 @@
     }
   },
   "dependencies": {
-    "nuxt": "^1.0.0",
-    "vuex": "^3.0.1"
+    "nuxt": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section :class="[ !showLies ? 'containerRight container' : 'container']">
     <div class="search">
       <input class="searchInput" type="text" placeholder="Search"><i class="iconfont icon-sousuo searchIcon"></i>
     </div>
@@ -12,14 +12,23 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  computed: mapState(["showLies"])
+};
 </script>
 
 <style lang="less" type="text/less" scoped>
+.containerRight {
+  transition: all 1s;
+  margin-left: 25% !important;
+  margin-right: 10% !important;
+}
 .container {
+  transition: all 1s;
   margin-top: 104px;
   margin-left: 16%;
-  margin-right: 16%;
+   margin-right: 16%;
   .search {
     position: relative;
     .searchInput {
@@ -49,16 +58,16 @@ export default {};
       cursor: pointer;
     }
     .searchIcon:hover {
-      background:rgba(96, 125, 139, .8)
+      background: rgba(96, 125, 139, 0.8);
     }
   }
-  .content{
+  .content {
     margin-top: 60px;
     text-align: center;
-    li{
-      h3{
+    li {
+      h3 {
         font-size: 18px;
-        opacity: .2;
+        opacity: 0.2;
       }
     }
   }

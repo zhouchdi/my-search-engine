@@ -4,7 +4,7 @@
       <!-- 导航条 -->
       <div>
         <span>
-          <i class="iconfont icon-liebiaoshitucaidan" @click="clickLies()"></i>
+          <i class="iconfont icon-liebiaoshitucaidan" @click="modify()"></i>
         </span>
         <nuxt-link :to="{name:'index'}">简单的搜索引擎</nuxt-link>
         <span class="three-part">
@@ -33,20 +33,19 @@
   </div>
 </template>
 <script>
+import { mapState, mapMutations } from "vuex";
 export default {
   data() {
     return {
-      showLies: true,
       showSwitch: true
     };
   },
+  computed: mapState(["showLies"]),
   methods: {
-    clickLies: function() {
-      this.showLies = !this.showLies;
-    },
     clickSwitch: function() {
       this.showSwitch = !this.showSwitch;
-    }
+    },
+    ...mapMutations(["modify"])
   }
 };
 </script>
@@ -168,7 +167,7 @@ export default {
       background: transparent;
     }
   }
-  li:hover{
+  li:hover {
     background: #e5e5e5;
   }
 }
