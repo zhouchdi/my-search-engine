@@ -1,23 +1,66 @@
 <template>
   <section class="container">
-    <div>
-      <input type="text" placeholder="Search"><i class="iconfont icon-sousuo"></i>
+    <div class="search">
+      <input class="searchInput" type="text" placeholder="Search"><i class="iconfont icon-sousuo searchIcon"></i>
     </div>
-    <div>
-      定制你的搜索
-    </div>
+    <ul class="content">
+      <li>
+        <h3>周氏搜索，搜索你所想</h3>
+      </li>
+    </ul>
   </section>
 </template>
 
 <script>
-export default {
-  
-};
+export default {};
 </script>
 
 <style lang="less" type="text/less" scoped>
 .container {
-  width: 100%;
-
+  margin-top: 104px;
+  margin-left: 16%;
+  margin-right: 16%;
+  .search {
+    position: relative;
+    .searchInput {
+      border: 1px solid rgba(96, 125, 139, 1) !important;
+      padding-left: 20px;
+      background: #fff;
+      width: calc(100% - 23px);
+      height: 40px;
+      line-height: 40px;
+      font-size: 18px;
+      font-weight: 700;
+      outline: none;
+      border-radius: 2px;
+    }
+    .searchIcon {
+      position: absolute;
+      width: 62px;
+      margin: 2px 0;
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      background: rgba(96, 125, 139, 1);
+      right: 0;
+      text-align: center;
+      font-weight: 500;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .searchIcon:hover {
+      background:rgba(96, 125, 139, .8)
+    }
+  }
+  .content{
+    margin-top: 60px;
+    text-align: center;
+    li{
+      h3{
+        font-size: 18px;
+        opacity: .2;
+      }
+    }
+  }
 }
 </style>
