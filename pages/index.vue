@@ -26,9 +26,9 @@ export default {
 }
 .container {
   transition: all 1s;
-  margin-top: 104px;
+  margin-top: 124px;
   margin-left: 16%;
-   margin-right: 16%;
+  margin-right: 16%;
   .search {
     position: relative;
     .searchInput {

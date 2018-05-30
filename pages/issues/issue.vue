@@ -1,5 +1,7 @@
 <template>
-    <div></div>
+    <div>
+      asdsadsadasdsad
+    </div>
 </template>
 <script>
 export default {
@@ -7,4 +9,7 @@ export default {
 };
 </script>
 <style lang="less" type="text/less" scoped>
+div{
+  margin-top: 100px;
+}
 </style>

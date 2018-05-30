@@ -8,14 +8,14 @@
         </span>
         <nuxt-link :to="{name:'index'}">简单的搜索引擎</nuxt-link>
         <span class="three-part">
-          <nuxt-link :to="{name:'index'}" class="iconfont icon-chonghai-zhizhu"></nuxt-link>
+          <nuxt-link :to="{name:'issues-issue'}" class="iconfont icon-chonghai-zhizhu"></nuxt-link>
         </span>
         <span class="last-part">
           <i class="iconfont icon-switch" @click="clickSwitch()"></i>
         </span>
       </div>
       <!-- 右上设置 -->
-      <ul :class="[showSwitch ? 'headerSetting showNone' : 'headerSetting boxShadow']">
+      <ul :class="[showSwitch ? 'headerSetting headerSetting_off' : 'headerSetting boxShadow']">
         <li><a href="https://github.com/zhouchdi/my-server">网站源码</a></li>
         <li><a href="https://github.com/zhouchdi/my-server">网站源码</a></li>
         <li><a href="https://github.com/zhouchdi/my-server">网站源码</a></li>
@@ -23,7 +23,7 @@
       </ul>
     </header>
     <!-- 左上设置 -->
-    <ul :class="[!showLies ? 'liesSetting' : 'showNone']">
+    <ul :class="[!showLies ? 'liesSetting' : 'liesSetting liesSetting_off']">
       <li><i class="iconfont icon-cainixihuan"></i><a href="https://github.com/zhouchdi/my-server">网站源码</a></li>
       <li><i class="iconfont icon-cainixihuan"></i><a href="https://github.com/zhouchdi/my-server">网站源码</a></li>
       <li><i class="iconfont icon-cainixihuan"></i><a href="https://github.com/zhouchdi/my-server">网站源码</a></li>
@@ -72,8 +72,12 @@ export default {
 .boxShadow {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14);
 }
-.showNone {
-  display: none !important;
+.headerSetting_off {
+  top: 24px !important;
+  z-index: -1;
+}
+.liesSetting_off {
+  left: -20% !important;
 }
 .header {
   position: fixed;
@@ -126,6 +130,7 @@ export default {
   }
   // header设置
   .headerSetting {
+    transition: all 1s;
     width: 100%;
     position: fixed;
     left: 0;
@@ -133,6 +138,7 @@ export default {
     top: 64px;
     height: 40px;
     line-height: 40px;
+    z-index: -1;
     background-color: @deepGreen;
     display: flex;
     justify-content: flex-start;
@@ -149,7 +155,9 @@ export default {
 }
 // 左上设置
 .liesSetting {
+  transition: all 1s;
   position: fixed;
+  left: 0;
   top: 104px;
   display: flex;
   flex-direction: column;
